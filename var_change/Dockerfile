@@ -2,6 +2,7 @@ FROM ubuntu:latest
 
 RUN apt update && apt install -y openssh-server sudo gcc gdb
 RUN apt install -y g++-multilib
+RUN apt install -y nano
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u  1001 ctf_flag
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -u 1000 ctf
 
