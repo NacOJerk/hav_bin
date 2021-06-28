@@ -29,7 +29,7 @@ void pwnme()
         exit(0);
     }
     printf("Better luck next time\n");
-	printf("Got %08X instead\n");
+    printf("changeMe = 0x%08X\n", changeMe);
 }
 
 int main(int argc, char **argv)
