@@ -1,0 +1,18 @@
+version: "1.0"
+services:
+  var_change:
+    build: var_change
+    ports:
+      - "2222:2222"
+  var_change_to:
+    build: var_change_to
+    ports:
+      - "2225:2225"
+  stack_control:
+    build: "stack control"
+    ports:
+      - "2223:2223"
+  random:
+    build: random
+    ports:
+      - "2224:2224"
