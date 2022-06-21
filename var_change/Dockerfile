@@ -13,8 +13,7 @@ WORKDIR /home/ubuntu
 
 
 USER ctf_flag
-COPY . .
-RUN rm Dockerfile
+COPY flag changevar.c ./
 RUN gcc -m32 changevar.c -o changevar -no-pie -fno-stack-protector
 
 USER root
@@ -26,6 +25,7 @@ RUN chmod ug+r flag
 USER ctf_flag
 RUN chmod u+s changevar
 USER root
+RUN chown ctf: /home/ubuntu
 
 RUN service ssh start
 

@@ -1,4 +1,3 @@
-version: "1.0"
 services:
   var_change:
     build: var_change
